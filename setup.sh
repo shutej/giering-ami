@@ -17,7 +17,7 @@ sudo -E apt-get install -y libnss-myhostname ntp
 sudo -E apt-get install -y \
     build-essential \
     git \
-    libbxml2-dev \
+    libxml2-dev \
     libopenblas-dev \
     libxslt-dev \
     python-dev \
