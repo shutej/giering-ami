@@ -13,14 +13,13 @@ sudo -E apt-get -y upgrade
 sudo -E apt-get install -y libnss-myhostname ntp
 
 ## Setup
-
 sudo -E apt-get install -y \
     build-essential \
+    cython \
     git \
-    libxml2-dev \
     libopenblas-dev \
-    libxslt-dev \
     python-dev \
+    python-lxml \
     python-matplotlib \
     python-nose \
     python-numpy \
@@ -29,8 +28,10 @@ sudo -E apt-get install -y \
 
 sudo -E pip install \
     Theano \
-    lxml \
     pandas \
+
+sudo -E mv /home/ubuntu/ipython-notebook.conf /etc/init
+sudo -E chown root.root /etc/init/ipython-notebook.conf
 
 ## Epilogue
 
