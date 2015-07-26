@@ -16,6 +16,11 @@
         "setup.sh"
       ],
       "binary": true
+    },
+    {
+      "type": "file",
+      "source": "ipython-notebook.conf",
+      "destination": "/etc/init/ipython-notebook.conf"
     }
   ],
   "builders": [
