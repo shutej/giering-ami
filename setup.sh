@@ -17,6 +17,8 @@ sudo -E apt-get install -y \
     build-essential \
     cython \
     git \
+    ipython \
+    ipython-notebook \
     libopenblas-dev \
     python-dev \
     python-lxml \
@@ -26,12 +28,13 @@ sudo -E apt-get install -y \
     python-pip \
     python-scipy \
 
+sude -u ubuntu ipython profile create nbserver
+sudo -E mv /home/ubuntu/ipython-notebook.conf /etc/init
+sudo -E chown root.root /etc/init/ipython-notebook.conf
+
 sudo -E pip install \
     Theano \
     pandas \
-
-sudo -E mv /home/ubuntu/ipython-notebook.conf /etc/init
-sudo -E chown root.root /etc/init/ipython-notebook.conf
 
 ## Epilogue
 

@@ -1,8 +1,9 @@
 # giering-ami
 
 To make this work, you'll need GNU make installed.  Also, you'll need a VPC set
-up with a public subnet and the **default** security group set to allow SSH
-traffic from `0.0.0.0/0`.
+up with a public subnet and the **default** security group looks like this:
+
+![images/security-group.png](images/security-group.png)
 
 Put credentials and the VPC and subnet identifiers into `aws.json` in the
 current directory:

@@ -21,6 +21,11 @@
         "setup.sh"
       ],
       "binary": true
+    },
+    {
+      "type": "file",
+      "source": "ipython_notebook_config.py",
+      "destination": "/home/ubuntu/.ipython/profile_nbserver/ipython_notebook_config.py"
     }
   ],
   "builders": [
