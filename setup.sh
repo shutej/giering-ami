@@ -14,8 +14,23 @@ sudo -E apt-get install -y libnss-myhostname ntp
 
 ## Setup
 
-sudo -E apt-get install -y python-numpy python-scipy python-dev python-pip python-nose build-essential libopenblas-dev git
-sudo -E pip install Theano pandas
+sudo -E apt-get install -y \
+    build-essential \
+    git \
+    libbxml2-dev \
+    libopenblas-dev \
+    libxslt-dev \
+    python-dev \
+    python-matplotlib \
+    python-nose \
+    python-numpy \
+    python-pip \
+    python-scipy \
+
+sudo -E pip install \
+    Theano \
+    lxml \
+    pandas \
 
 ## Epilogue
 
