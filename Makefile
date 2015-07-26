@@ -6,7 +6,7 @@ validate: packer_bin/packer
 	packer_bin/packer validate -var-file=aws.json ami.json
 
 ami: ami.json packer_bin/packer
-	PACKER_LOG=1 PACKER_LOG_PATH=strider_ami.log time packer_bin/packer build -var-file=aws.json $<
+	PACKER_LOG=1 PACKER_LOG_PATH=ami.log time packer_bin/packer build -var-file=aws.json $<
 
 packer_bin/packer_bin.zip:
 	mkdir -p $(shell dirname $@)
