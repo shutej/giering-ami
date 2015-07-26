@@ -14,24 +14,24 @@ sudo -E apt-get install -y libnss-myhostname ntp
 
 ## Setup
 
-sudo -E apt-get install python-numpy python-scipy python-dev python-pip python-nose build-essential libopenblas-dev git
+sudo -E apt-get install -y python-numpy python-scipy python-dev python-pip python-nose build-essential libopenblas-dev git
 sudo -E pip install Theano pandas
 
 ## Epilogue
 
 # Clean up unneeded packages
-apt-get -y autoremove
+sudo -E apt-get -y autoremove
 
 # Clean up tmp
-rm -rf /tmp/*
+sudo -E rm -rf /tmp/*
 
 # Removing leftover leases and persistent rules
 echo "cleaning up dhcp leases"
-rm /var/lib/dhcp/*
+sudo -E rm /var/lib/dhcp/*
 
 # Remove cached .debs
 sudo -E apt-get clean
 
 # Zero out the free space to save space in the final image:
-dd if=/dev/zero of=/EMPTY bs=1M
-rm -f /EMPTY
+sudo -E dd if=/dev/zero of=/EMPTY bs=1M
+sudo -E rm -f /EMPTY
