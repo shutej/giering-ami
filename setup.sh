@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 ## Prelude
 
@@ -28,7 +29,7 @@ sudo -E apt-get install -y \
     python-pip \
     python-scipy \
 
-sude -u ubuntu ipython profile create nbserver
+sudo -u ubuntu ipython profile create nbserver
 sudo -E mv /home/ubuntu/ipython-notebook.conf /etc/init
 sudo -E chown root.root /etc/init/ipython-notebook.conf
 
@@ -52,5 +53,5 @@ sudo -E rm /var/lib/dhcp/*
 sudo -E apt-get clean
 
 # Zero out the free space to save space in the final image:
-sudo -E dd if=/dev/zero of=/EMPTY bs=1M
+sudo -E dd if=/dev/zero of=/EMPTY bs=1M || true
 sudo -E rm -f /EMPTY
