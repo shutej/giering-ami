@@ -21,6 +21,7 @@ sudo -E apt-get install -y \
     ipython \
     ipython-notebook \
     libopenblas-dev \
+    libtorch3-dev \
     python-dev \
     python-lxml \
     python-matplotlib \
