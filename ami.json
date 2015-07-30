@@ -32,7 +32,6 @@
     {
       "ami_name": "ami/{{timestamp}}",
       "associate_public_ip_address": true,
-      "iam_instance_profile": "default",
       "instance_type": "t2.micro",
       "ssh_username": "ubuntu",
       "type": "amazon-ebs",
